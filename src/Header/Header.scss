@@ -1,4 +1,116 @@
-.NavigationMenu {
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  background-color: black;
+  .languageSwitcher {
+    margin-left: 2rem;
+    height: 4rem;
+    width: 6rem;
+    border: none;
+    background-size: cover;
+    background-position: center;
+    &.polishLanguage {
+      background-image: url("../Shered/components/flagOfPoland.jpg");
+    }
+    &.englishLanguage {
+      background-image: url("../Shered/components/flagOfGB.png");
+      background-size: 7rem 7rem;
+    }
+  }
+  .NavigationMenu {
     display: flex;
-    
+    .hamburgerIcon {
+      display: flex;
+      margin-right: 2rem;
+      padding: 1em;
+      width: 2rem;
+      height: 3rem;
+      justify-content: space-around;
+      flex-flow: column nowrap;
+      z-index: 10;
+      cursor: pointer;
+
+      .burger {
+        width: 3rem;
+        height: 0.25rem;
+        border-radius: 10px;
+        background-color: white;
+        transform-origin: 1px;
+        transition: transform 0.3s linear;
+
+        &:nth-child(1) {
+          transform: rotate(0);
+          margin-top: 0;
+        }
+
+        &:nth-child(2) {
+          transform: scaleX(1);
+          opacity: 1;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(0);
+          margin-bottom: 0;
+        }
+      }
+    }
+    .navigation {
+      display: none;
+    }
+    &.open {
+      .burger {
+        background-color: blue;
+
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          margin-top: 0;
+        }
+
+        &:nth-child(2) {
+          transform: scaleX(0);
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          margin-bottom: 0;
+        }
+        z-index: 1000;
+      }
+      .navigation {
+        display: block;
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          background-color: black;
+          position: fixed;
+          transform: translateX(0);
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 100vw;
+          list-style: none;
+
+          li {
+            padding: 1rem;
+            font-size: 2rem;
+
+            a {
+              color: white;
+              text-decoration: none;
+            }
+            a:hover {
+              color: blue;
+            }
+          }
+        }
+      }
+    }
+  }
 }
