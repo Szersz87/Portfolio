@@ -50,20 +50,20 @@
           opacity: 0;
           position: absolute;
           top: calc(40% - 25px);
-          left: 16rem;
+          left: 17rem;
           transition: opacity 0.3s ease;
         }
         .data2 {
           opacity: 0;
           position: absolute;
           top: calc(40% - 25px);
-          right: 16rem;
+          right: 17rem;
           transition: opacity 0.3s ease;
         }
-        &:hover .data1{
+        &:hover .data1 {
           opacity: 1;
         }
-        &:hover .data2{
+        &:hover .data2 {
           opacity: 1;
         }
         &:after {
@@ -94,39 +94,15 @@
 }
 @media screen and (min-width: 768px) {
   .homePage {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -2rem;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    color: white;
     .welcomeContainer {
-      position: relative;
-      margin: 2rem 2rem 2rem 2rem;
-      h1 {
-        text-align: center;
-        padding: 1rem;
-        font-size: 3rem;
-      }
       p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin-bottom: 5px;
       }
-      p + p {
-        text-indent: 1.5em;
-        margin-top: 0;
-      }
-    }
-    .imageNavigation {
-      display: none;
     }
     .timeLine {
-      position: relative;
-      max-width: 800px;
+      margin-top: 4rem;
+      max-width: 700px;
       width: 100%;
       ul {
         display: flex;
@@ -137,10 +113,27 @@
         li {
           position: relative;
           margin-bottom: 2em;
-          padding: 2em;
+          padding: 1em;
           width: 50%;
           border: 1px solid #0076e8;
           border-radius: 8px;
+          p {
+            font-size: 1.4rem;
+          }
+          .data1 {
+            opacity: 0;
+            position: absolute;
+            top: calc(40% - 25px);
+            left: 30rem;
+            transition: opacity 0.3s ease;
+          }
+          .data2 {
+            opacity: 0;
+            position: absolute;
+            top: calc(40% - 25px);
+            right: 30rem;
+            transition: opacity 0.3s ease;
+          }
           &:after {
             position: absolute;
             top: calc(50% - 10px);
@@ -155,13 +148,13 @@
             transform: translateX(80px);
           }
           &:nth-child(even)::after {
-            left: -18px;
+            left: -2.5rem;
           }
           &:nth-child(odd) {
             transform: translateX(-80px);
           }
           &:nth-child(odd)::after {
-            right: -18px;
+            right: -2.5rem;
           }
         }
       }
@@ -174,7 +167,78 @@
         width: 2px;
         height: 100%;
         background-color: #0076e8;
-        content: '';
+        content: "";
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .homePage {
+    .imageNavigation {
+      display: flex;
+      background-image: url("../Shered/components/morfeuszWybor.jpg");
+      background-size: cover;
+      width: 800px;
+      height: 700px;
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 13rem 8rem;
+        width: 9em;
+        .img {
+          width: 100%;
+          height: 100%;
+          margin-top: 5rem;
+          background-position: 60%;
+          background-size: cover;
+          border-radius: 15px;
+          transition: 0.8s;
+        }
+
+        .one {
+          .svg-inline--fa {
+            height: 10em;
+            transition: 2s;
+          }
+        }
+        .two {
+          height: 11em;
+          background-position: center;
+          background-image: url("../Shered/components/anonimus.jpeg");
+        }
+        .text {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          text-align: center;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.4);
+          border-radius: 15px;
+          opacity: 0;
+          transition: 2s;
+          cursor: pointer;
+          h3 {
+            margin-top: 8rem;
+          }
+        }
+      }
+      .card:hover .text {
+        opacity: 1;
+      }
+      .card:hover .one {
+        opacity: 0;
+      }
+      .card:hover .two {
+        transform: rotateY(-180deg);
+        opacity: 0;
+      }
+      .card:hover .textTwo {
+        animation: down 0.8s;
       }
     }
   }

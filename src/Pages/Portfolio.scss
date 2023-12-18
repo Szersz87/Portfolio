@@ -1,0 +1,176 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  .wrapper {
+    display: flex;
+    padding: 0.5rem;
+    width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    .card {
+      position: relative;
+      flex-grow: 0.8;
+      height: 600px;
+      margin: 4px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      transition: flex-grow 0.8s;
+      overflow: hidden;
+      cursor: pointer;
+      .link {
+        display: none;
+      }
+      .text {
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+        transform: translateX(-50%);
+        width: 80%;
+        padding: 2em;
+        border-radius: 6px;
+        z-index: 5;
+        h2 {
+          text-transform: uppercase;
+          transform: rotate(-90deg);
+        }
+        p {
+          display: none;
+          opacity: 0;
+          font-size: 1.6rem;
+        }
+      }
+    }
+    .card::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      transition: 0.5s;
+      content: "";
+    }
+    .project1 {
+      background-image: url(../Shered/components/rwdbg.jpg);
+    }
+    .project2 {
+      background-image: url(../Shered/components/js1time.jpg);
+    }
+    .project3 {
+      background-image: url(../Shered/components/reactCleanCode.jpg);
+    }
+    .project4 {
+      background-image: url(../Shered/components/portfolio.jpg);
+    }
+    .project5 {
+      background-image: url(../Shered/components/progress.jpg);
+    }
+    .project1::before,
+    .project2::before,
+    .project3::before,
+    .project4::before,
+    .project5::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      content: "";
+      background-color: black;
+    }
+    .active {
+      flex-grow: 8;
+      &.active .link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 2rem;
+        a {
+          text-decoration: none;
+          padding: 0.5rem;
+          border-radius: 8px;
+          background-color: rgba(0, 0, 0, 0.3);
+          color: #fff;
+          z-index: 5;
+          &:hover {
+            font-size: 1.5rem;
+            transition: 0.4s;
+          }
+        }
+      }
+      &.active .text {
+        animation: show-bg 1s 0.6s forwards;
+      }
+      &.active .text h2 {
+        display: none;
+      }
+      &.active .text p {
+        display: block;
+        animation: show-text 1s 0.2s forwards;
+      }
+    }
+    .card.active::after {
+      opacity: 0;
+    }
+  }
+}
+@keyframes show-bg {
+  to {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+@keyframes show-text {
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .body {
+    .wrapper {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      .card {
+        position: relative;
+        flex-grow: 0.8;
+        margin: 1px;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        transition: flex-grow 0.8s;
+        overflow: hidden;
+        cursor: pointer;
+        .link {
+          display: none;
+        }
+        .text {
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          width: 90%;
+          padding: 1em;
+          border-radius: 6px;
+          z-index: 5;
+          h2 {
+            margin-bottom: 150px;
+            text-transform: uppercase;
+            transform: rotate(-90deg);
+          }
+          p {
+            display: none;
+            opacity: 0;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
