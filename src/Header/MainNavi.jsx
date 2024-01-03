@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import Button from "../Shered/Button";
 import Ikon from "../Shered/Icon";
 import { TypeAnimation } from "react-type-animation";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 import {
   faFacebook,
   faLinkedin,
@@ -52,7 +56,27 @@ export default function MainNavi() {
         </ul>
       </div>
       <div className="rightNavi">
-        <div className="images"></div>
+        <div className="images">
+        <Swiper
+      modules={[Autoplay]}
+      centeredSlides={true}
+      autoplay={{
+        delay: 3500,
+        disableOnInteraction: false,
+      }}
+
+      spaceBetween={30}
+      slidesPerView={1}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide><img src="../../mountains.jpg" alt="mountains and river" style={{ width: '100%', height: 'auto' }} /></SwiperSlide>
+      <SwiperSlide><img src="../../bike.jpg" alt="bike" style={{ width: '100%', height: 'auto' }}/></SwiperSlide>
+      <SwiperSlide><img src="../../waterfall.jpg" alt="waterfall" style={{ width: '100%', height: 'auto' }}/></SwiperSlide>
+      
+      
+    </Swiper>
+        </div>
         <div className="profilFoto"></div>
         <h2>Łukasz Szerszyński</h2>
         <div className="typing">
