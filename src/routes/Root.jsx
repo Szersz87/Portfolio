@@ -10,8 +10,8 @@ export default function Root() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/aboutMe" element={<AboutMe />} />
+        <Route path="/" element={<AboutMe />} />
+        <Route path="/aboutMe" element={<HomePage />} />
         <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
     </Router>

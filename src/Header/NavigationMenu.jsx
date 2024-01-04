@@ -33,7 +33,7 @@ export default function NavigationMenu({ isOpen, closeMenu }) {
           </div>
           <ul>
             <li onClick={closeMenu}>
-              <Link to="/aboutMe">
+              <Link to="/">
                 <Ikon src={faUser} /> About Me
               </Link>
             </li>

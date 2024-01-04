@@ -1,78 +1,63 @@
 .aboutMe {
   display: flex;
+  flex-direction: column;
+  align-content: center;
   color: white;
+  padding: 4em;
   height: 100%;
-  width: 60%;
-  .leftSide {
-    width: 30%;
-    background-color: rgb(22, 21, 21);
-    padding: 2rem;
-    .contakt {
-      position: relative;
-      left: 10%;
-      .image {
-        height: 260px;
-        width: 180px;
-        background-color: #fff;
-        margin-bottom: 0.8rem;
-      }
-      .adres {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        span {
-          margin-left: 1rem;
-          &:hover {
-            color: blue;
-          }
-        }
-        p {
-          margin-top: 0;
-          margin-bottom: 0.4rem;
-        }
-        a {
-          margin-bottom: 0.4rem;
-          text-decoration: none;
-          color: #fff;
-        }
-      }
+  width: 80%;
+  h1 {
+    font-size: 2.4rem;
+  }
+  .welcomeContainer {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    h2 {
+      margin-bottom: 2em;
+      text-align: center;
+      font-size: 1.6rem;
     }
-    .accordion {
-      margin-top: 4em;
-      width: 100%;
-      background-color: black;
-      border-radius: 6px;
-      .accordionBox {
-        margin: 20px;
-        button {
-          margin-top: 1em;
-          width: 100%;
-          font-size: 2rem;
-          text-align: center;
-          border: none;
-          border-radius: 6px;
-          transition: background-color 0.3s;
-          cursor: pointer;
-          &:hover,
-          &:focus {
-            background-color: rgb(22, 21, 21);
-            color: white;
-            outline: none;
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  .accordion {
+    margin-top: 4em;
+    width: 100%;
+    background-color: black;
+    border-radius: 6px;
+    .accordionBox {
+      margin: 20px;
+      button {
+        margin-top: 1em;
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+        border: none;
+        border-radius: 6px;
+        transition: background-color 0.3s;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          background-color: rgb(22, 21, 21);
+          color: white;
+          outline: none;
+        }
+      }
+      .infoText {
+        display: none;
+        padding: 1em 2em;
+        li {
+          margin-bottom: 0.5em;
+          span {
+            margin-left: 4em;
           }
         }
-        .infoText {
-          display: none;
-          padding: 1em 2em;
-          li {
-            margin-bottom: 0.5em;
-            span {
-              margin-left: 4em;
-            }
-          }
-        }
-        .active {
-            display: block;
-        }
+      }
+      .active {
+        display: block;
       }
     }
   }
