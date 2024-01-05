@@ -49,7 +49,7 @@ export default function MainNavi() {
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/resume">
               <Button buttonContent="button4" icon={faIdCard} title="Resume" />
             </Link>
           </li>

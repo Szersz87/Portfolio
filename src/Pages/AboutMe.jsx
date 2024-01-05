@@ -4,11 +4,12 @@ import Button from "../Shered/Button";
 import { faAt, faPhone, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Margin } from "devextreme-react/cjs/bar-gauge";
 
 export default function AboutMe() {
   return (
     <div className="aboutMe">
-      <ScrollAnimation duration={5} animateIn="hinge" initiallyVisible={true} animatePreScroll={false}>
+      <ScrollAnimation duration={5} animateIn="hinge" initiallyVisible={true} animatePreScroll={false} style={{ marginLeft: '150px' }}>
         <h1>O mnie</h1>
       </ScrollAnimation>
       <div className="welcomeContainer">
@@ -25,6 +26,7 @@ export default function AboutMe() {
       </div>
       <div className="accordion">
         <div className="accordionBox">
+        <ScrollAnimation delay={400} animateIn='tada' initiallyVisible={true}>
           <Button className="hardSkills" title="Hard Skills" />
           <ul className="infoText">
             <li>HTML</li>
@@ -33,6 +35,8 @@ export default function AboutMe() {
             <li>React.js</li>
             <li>Git</li>
           </ul>
+          </ScrollAnimation>
+          <ScrollAnimation delay={400} animateIn='tada' initiallyVisible={true}>
           <Button className="softSkills" title="Soft Skills" />
           <ul className="infoText">
             <li>Umiejętność pracy zespołowej</li>
@@ -41,6 +45,7 @@ export default function AboutMe() {
             <li>Elastyczność</li>
             <li>Kreatywność</li>
           </ul>
+          </ScrollAnimation>
           <ScrollAnimation delay={400} animateIn='tada' initiallyVisible={true}>
           <Button className="languages" title="Languages" />
           <ul className="infoText">

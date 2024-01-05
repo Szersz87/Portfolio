@@ -44,7 +44,7 @@ export default function NavigationMenu({ isOpen, closeMenu }) {
               </Link>
             </li>
             <li onClick={closeMenu}>
-              <Link to="/">
+              <Link to="/resume">
                 <Ikon src={faIdCard} /> 
                 Resume
               </Link>
