@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "atropos": "^2.0.2",
     "devextreme": "23.2.3",
     "devextreme-react": "23.2.3",
     "orbit-space": "^1.1.0",
